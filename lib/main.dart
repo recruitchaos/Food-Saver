@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_saver/constants/app_colors.dart';
+import 'package:food_saver/views/login/login.dart';
 import 'package:food_saver/views/registration/user_type.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -31,7 +32,7 @@ class MyApp extends StatelessWidget {
         )
       ),
       debugShowCheckedModeBanner: false,
-      home: const UserType(),
+      home: const LoginView(),
     );
   }
 }

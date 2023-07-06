@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-
+import 'package:food_saver/services/auth.dart';
 import '../../constants/app_colors.dart';
 import '../../custom widgets/custom_button.dart';
 import '../../custom widgets/custom_textfield.dart';
-import 'donor_registration.dart';
 
 class RecipientRegistration extends StatefulWidget {
   const RecipientRegistration({super.key});
@@ -15,7 +14,6 @@ class RecipientRegistration extends StatefulWidget {
 class _RecipientRegistrationState extends State<RecipientRegistration> {
 
  TextEditingController nameController = TextEditingController();
- TextEditingController orgNameController = TextEditingController();
  TextEditingController emailController = TextEditingController();
  TextEditingController passwordController = TextEditingController();
 
@@ -42,7 +40,11 @@ class _RecipientRegistrationState extends State<RecipientRegistration> {
               SizedBox(height: 16,),
               CustomTextfield(label: 'Password', isObscure: true, controller: passwordController,),
               SizedBox(height: 50,),
-              CustomButton(text: 'Next',),
+              GestureDetector(
+                onTap: () {
+                  createUser(emailController.text, passwordController.text, nameController.text, context);
+                },
+                child: CustomButton(text: 'Next',)),
             ],
           ),
         ),
