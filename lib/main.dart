@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:food_saver/constants/app_colors.dart';
-import 'package:food_saver/views/login/login.dart';
-import 'package:food_saver/views/onboarding/onboarding_1.dart';
-import 'package:food_saver/views/onboarding/onboarding_navigate.dart';
-import 'package:food_saver/views/registration/user_type.dart';
+import 'package:food_saver/views/page%20views/donor%20view/homepage.dart';
+import 'package:food_saver/views/page%20views/donor%20view/navigate.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {
@@ -34,7 +32,7 @@ class MyApp extends StatelessWidget {
         )
       ),
       debugShowCheckedModeBanner: false,
-      home: const OnBoardingNavigate(),
+      home: const Navigate(),
     );
   }
 }
