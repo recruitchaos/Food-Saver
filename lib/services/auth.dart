@@ -9,6 +9,7 @@ Account account = Account(client);
 Future createUser(String email, String password, String name, BuildContext context) async {
   try {
     final user = await account.create(userId: ID.unique(), email: email, password: password, name: name);
+    ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text("Account created! Redirecting to Login")));
     print("User created");
   }
   catch(e) {

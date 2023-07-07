@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_saver/services/auth.dart';
+import 'package:food_saver/views/login/login.dart';
 import '../../constants/app_colors.dart';
 import '../../custom widgets/custom_button.dart';
 import '../../custom widgets/custom_textfield.dart';
@@ -43,6 +44,7 @@ class _RecipientRegistrationState extends State<RecipientRegistration> {
               GestureDetector(
                 onTap: () {
                   createUser(emailController.text, passwordController.text, nameController.text, context);
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => LoginView()));
                 },
                 child: CustomButton(text: 'Next',)),
             ],
